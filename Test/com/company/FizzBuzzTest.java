@@ -20,6 +20,18 @@ public class FizzBuzzTest {
         int ListSize = com.Utils.Random.randomIntBetween(10,100);
         FizzBuzzList fizzBuzz = new FizzBuzzList(FizzMultiplesDivisor,BuzzMultiplesDivisor,ListSize);
     }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestContructorNegativeLength() {
+        FizzBuzzList fizzBuzz = new FizzBuzzList(1,2,-100);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestContructorFizzMultipleOfCero() {
+        FizzBuzzList fizzBuzz = new FizzBuzzList(0,1,100);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void TestContructorBuzzMultipleOfCero() {
+        FizzBuzzList fizzBuzz = new FizzBuzzList(1,0,100);
+    }
     @Test
     public void TestCountSize() {
         int FizzMultiplesDivisor = com.Utils.Random.randomIntBetween(1,5);

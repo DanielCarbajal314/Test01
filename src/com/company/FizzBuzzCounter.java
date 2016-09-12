@@ -9,6 +9,8 @@ public class FizzBuzzCounter {
 
     public FizzBuzzCounter(int fizzMultipleDivisor, int buzzMultipleDivisor)
     {
+        if (fizzMultipleDivisor==0) {throw new IllegalArgumentException("Fizz's divisor must be different from number 0");}
+        if (buzzMultipleDivisor==0) {throw new IllegalArgumentException("Bazz's divisor must be different from number 0");}
         this.fizzMultipleDivisor=fizzMultipleDivisor;
         this.buzzMultipleDivisor=buzzMultipleDivisor;
     }

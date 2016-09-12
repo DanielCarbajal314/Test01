@@ -12,6 +12,7 @@ public class FizzBuzzList {
     public FizzBuzzList(int fizzMultipleDivisor, int buzzMultipleDivisor, int listDimension)
     {
         this.fizzBuzzCounter = new FizzBuzzCounter(fizzMultipleDivisor,buzzMultipleDivisor);
+        if (listDimension<0) {throw new IllegalArgumentException("The list length must be a non negative number");}
         this.listDimension=listDimension;
     }
     public List<String> makeCountList()
